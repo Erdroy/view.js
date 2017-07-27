@@ -1,6 +1,21 @@
-
 var View = {
-    Enable: function(name){
+    Enable: function(name) {
+        var all = $("div[view="+name+"]");
+
+        if(all.length == 0)
+            return;
+        
+        all[0].style = "visibility: visible; display: default;";
+    },
+    Disable: function(name) {
+        var all = $("div[view="+name+"]");
+
+        if(all.length == 0)
+            return;
+        
+        all[0].style  = "visibility: hidden; display: none;";
+    },
+    DisableAll: function(name){
         var all = $("div[view="+name+"]");
         for (var i = 0; i < all.length; i++) {
             if (all[i].getAttribute("view") === name) {
@@ -9,7 +24,7 @@ var View = {
             }
         }
     },
-    Disable: function(name){
+    DisableAll: function(name){
         var all = $("div[view="+name+"]");
         for (var i = 0; i < all.length; i++) {
             if (all[i].getAttribute("view") === name) {
