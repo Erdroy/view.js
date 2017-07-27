@@ -1,6 +1,7 @@
 # view.js
 view.js - script for panel/section/element display management, easier advanced single-page sites
-This is my script which I'm using for all of my web apps.
+This is my script which I'm using for all of my web apps.<br>
+**jQuery is required**
 
 ## Example
 ```HTML
