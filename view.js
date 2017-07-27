@@ -15,24 +15,17 @@ var View = {
         
         all[0].style  = "visibility: hidden; display: none;";
     },
-    DisableAll: function(name){
+    EnableAll: function(name){
         var all = $("div[view="+name+"]");
         for (var i = 0; i < all.length; i++) {
-            if (all[i].getAttribute("view") === name) {
-                all[i].style = "visibility: visible; display: default;";
-                return;
-            }
+            all[i].style = "visibility: visible; display: default;";
         }
     },
     DisableAll: function(name){
         var all = $("div[view="+name+"]");
         for (var i = 0; i < all.length; i++) {
-            if (all[i].getAttribute("view") === name) {
-                all[i].style = "visibility: hidden; display: none;";
-                return;
-            }
+            all[i].style = "visibility: hidden; display: none;";
         }
-
     },
     DisableAll: function(){
         var panels = $("div[view]");
